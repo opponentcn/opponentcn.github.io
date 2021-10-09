@@ -201,7 +201,7 @@
                         <div name="lsh" style="font-size:14px;color:#FF0000;font-weight:normal;display:inline-block;"
                             initvaluetype="custom" data-uid="104" mspplus-field="true" prefix="处理号>>"
                             class="sui-text  sui-component  form-readOnly" mode="readOnly" sui="true">
-                            <div class="value-text"><span class="">处理号&gt;&gt;YQQJBKSLSCRXYSQ202109240419</span></div>
+                            <div class="value-text"><span class="">处理号&gt;&gt;YABIODHAOSCRXYSQ202110100419</span></div>
                         </div>
                     </div>
                     <div data-uid="191" class=" ">
@@ -614,7 +614,7 @@
                                                 name="jjlxrdh" type="text" id="input_jjlxrdh" class="form-control "
                                                 value="" readonly="readonly" style="display: none;">
                                             <div class="value-text"><span class="value"
-                                                    id="value_jjlxrdh">17662810272</span></div>
+                                                    id="value_jjlxrdh">18562610281</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -812,8 +812,8 @@
                                             sui="true">
                                             <div class="value-text"><span> 同意请假申请，学生回校后进入销假环节</span><br>
                                                 <div style="text-align: right;">——<img class="personal-signature"
-                                                        src="https://wk.njucm.edu.cn/default/base/workflow/do.jsp?workItemID=613632&amp;f=wechat&amp;appload=0&amp;layerId=1&amp;id=163858&amp;ticket=ST-122470-HiR5fbCuJsEINe5dYfYU-62f1e6016fd6">王健
-                                                    2021-10-02 08:13</div>
+                                                        src="https://wk.njucm.edu.cn/default/base/workflow/do.jsp?workItemID=613632&amp;f=wechat&amp;appload=0&amp;layerId=1&amp;id=163858&amp;ticket=ST-122470-HiR5fbCuJsEINe5dYfYU-62f1e6016fd6"><span id="fudaoyuan">王健</span>
+                                                    2021-10-8 08:13</div>
                                             </div><textarea class="form-control" rows="3" readonly="readonly"
                                                 style="border: none; display: none;"></textarea>
                                         </div>
@@ -927,7 +927,7 @@
                                                                 style="width: 100%; display: none;">
                                                                 <option id="sui-participates-3" value="81" op_type="emp"
                                                                     op_name="王健" selected="selected">王健：</option>
-                                                            </select><span class="partici-readonly">王健：</span></div>
+                                                            </select><span class="partici-readonly" id="fudaoyuan2">王健：</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1042,9 +1042,13 @@
         var class2 = prompt("请输入班级", "核工程195");
         var dormitory_station = prompt("请输入宿管站", "仙林0号站");
         var dormitory_number = prompt("请输入宿舍号", "C00-0000");
+
+
+
         // var data = prompt("请输入日期", "2021-10-09");
-        // var stuid = prompt("请输辅导员", "");
+        var fdy = prompt("请输辅导员", "");
         // alert(name);
+        // document.getElementById('value_jjlxrxm').innerHTML="RUNOOB";
 
         var d_name = document.getElementById('value_sqrxm');
         d_name.innerHTML = name;
@@ -1068,6 +1072,20 @@
         var d_dormitory_number = document.getElementById('value_sshao');
         d_dormitory_number.innerHTML = dormitory_number;
 
+        var d_fdy = document.getElementById('fudaoyuan');
+        var full_fdy = fdy + myData + " 07:13";
+        d_fdy.innerHTML = fdy;
+        var d_fdy2 = document.getElementById('fudaoyuan2');
+        d_fdy2.innerHTML = fdy;
+
+
+
+        var parents=["李永","王楠","田成","王轩","任健","邓仓","马顺","袁峰","李兰若","唐雅美","郭隽雅","叶宜春","邓弘文","白宜年","姚文德","杨天赋","苏茂才","孟博实","邓元良","魏坚白","杜炎彬"];
+        var d_parents = document.getElementById('value_jjlxrxm');
+        var rand1 = Math.ceil(Math.random()*10) + Math.ceil(Math.random()*10);
+        d_parents.innerHTML = parents[rand1];
+        
+
         // value_wcsy
         // value_qjqx_ks1 开始时间
         // value_qjqx_ks2 截止时间
@@ -1076,15 +1094,11 @@
         // value_banji 班级
         // value_sgz 宿管站
         // value_sshao 房间号
+        // value_jjlxrxm 监护人
+        // value_jjlxrxm
 
 
-    var r=confirm("如果觉得好用,请作者喝瓶可乐。");
-	if (r==true){
-		window.open("https://citingnutria.github.io/pass/imagetest");
-	}
-	else{
-		
-	}
+
     </script>
 
 </body>
