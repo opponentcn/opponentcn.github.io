@@ -1056,8 +1056,8 @@ var　college_list=["药学院","护理学院","卫生经济管理学院","人�
         myData = dateFormat("YYYY-mm-dd", myDate);
         // alert(collegeWithClass[0][0]+collegeWithClass[0][1]);
         alert("不要在QQ里直接打开！！！\n没有填写信息的弹窗就说明浏览器有问题。\n填完信息会生成网页,滑动给门卫看就行,反正临时出入申请也不能刷码,日期自动更新。\n可以尝试使用默认随机值，姓名学号必改。");
-        var name = prompt("请输入您的名字", "狗蛋"); // 弹出input框
-        var stuid = prompt("请输入您的学号", "23333");
+        var name = prompt("请输入您的名字", ""); // 弹出input框
+        var stuid = prompt("请输入您的学号", "");
         var reason = prompt("请输入外出理由", reason_list[Random(0,reason_list.length-1)]);
         var address = prompt("请输入外出地点", address_list[Random(0,address_list.length-1)]);
         // var college = prompt("请输入学院", college_list[Math.ceil(Math.random()*10)]);
