@@ -1034,22 +1034,37 @@ function Random(min, max) {
 
 
 
-var college_list=["药学院","护理学院","卫生经济管理学院","人工智能与信息技术学院","中医学院·中西医结合学院","医学院·整合医学学院","针灸推拿学院·养生康复学院","药学院","护理学院","卫生经济管理学院"]
+var　college_list=["药学院","护理学院","卫生经济管理学院","人工智能与信息技术学院","中医学院·中西医结合学院","医学院·整合医学学院","针灸推拿学院·养生康复学院","药学院","护理学院","卫生经济管理学院"]
         var parents=["李永","王楠","田成","王轩","任健","邓仓","马顺","袁峰","李兰若","唐雅美","郭隽雅","叶宜春","邓弘文","白宜年","姚文德","杨天赋","苏茂才","孟博实","邓元良","魏坚白","杜炎彬"];
     var class_list=["中医192","计算机202","医信192","中药191","中药181","医信181","中西202","中西201","中西191","医信202"]
+    var cwc = [
+        ["药学院","中药181",["中药182"],["中药191"]],
+        ["人工智能与信息技术学院","医信192","计算机201","医信191","计算机181"],
+        ["针灸推拿学院·养生康复学院","推拿181","推拿191","推拿182","推拿192"],
+        ["护理学院","护理191","护理181","护理192","护理182"],
+
+    ]
+
+
+
     var reason_list=["看牙医","面试","实习","修电脑","修手机","兼职","拿药","取文件"]
     var address_list=["新街口","汉中门","仙林中心","学则路","玄武区","徐庄","爱尚","珠江路","上海路","安德门","夫子庙",]
     var dormitory_number = "C"+String(Random(1,50))+"-"+String(Random(1, 2))+String(Random(1, 5))+String(Random(1, 2))+String(Random(1, 3));
         var myDate = new Date();
         myDate.toLocaleDateString();     //获取当前日期
         myData = dateFormat("YYYY-mm-dd", myDate);
+        // alert(collegeWithClass[0][0]+collegeWithClass[0][1]);
         alert("不要在QQ里直接打开！！！\n没有填写信息的弹窗就说明浏览器有问题。\n填完信息会生成网页,滑动给门卫看就行,反正临时出入申请也不能刷码,日期自动更新。\n可以尝试使用默认随机值，姓名学号必改。");
         var name = prompt("请输入您的名字", "狗蛋"); // 弹出input框
         var stuid = prompt("请输入您的学号", "23333");
-        var reason = prompt("请输入外出理由", reason_list[Random(0,7)]);
-        var address = prompt("请输入外出地点", address_list[Random(0,10)]);
-        var college = prompt("请输入学院", college_list[Math.ceil(Math.random()*10)]);
-        var class2 = prompt("请输入班级", class_list[Random(0,9)]);
+        var reason = prompt("请输入外出理由", reason_list[Random(0,reason_list.length-1)]);
+        var address = prompt("请输入外出地点", address_list[Random(0,address_list.length-1)]);
+        // var college = prompt("请输入学院", college_list[Math.ceil(Math.random()*10)]);
+        // var class2 = prompt("请输入班级", class_list[Random(0,9)]);
+
+        var college_random_value=Random(0,cwc.length-1);
+        var college = prompt("请输入学院", cwc[college_random_value][0]);
+        var class2 = prompt("请输入班级", cwc[college_random_value][Random(1,cwc[college_random_value].length-1)]);
 
         var dormitory_station = prompt("请输入宿管站", "仙林"+Math.ceil(Math.random()*10)+"号站");
         var dormitory_number = prompt("请输入宿舍号", dormitory_number);
