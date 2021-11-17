@@ -5,7 +5,6 @@ echo ${Date}
 echo ${Date_before}
 mv ${Date_before}/ ${Date}/
 git add *
-git rm *
 git commit -m"${Date}"
 git push origin main
 
